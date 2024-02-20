@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 
 @Component({
     selector: 'app-header',
@@ -8,10 +8,9 @@ import { Component } from '@angular/core';
 
 export class HeaderComponent{
     btnImg = "../../assets/desktop/btn-light-mode.svg";
-    btn = <HTMLButtonElement> document.getElementById("light-mode");
-    darkElements = document.querySelectorAll('body, .hearder') as NodeListOf<HTMLElement>;
+    // btn = <HTMLButtonElement> document.getElementById("light-mode");
+    darkElements = document.querySelectorAll('body, .hearder, .search-bar') as NodeListOf<HTMLElement>;
     originalBackgroundColor = window.getComputedStyle(document.body).backgroundColor;
-
 
     isDarkMode = false;
 
@@ -20,7 +19,11 @@ export class HeaderComponent{
         this.btnImg = this.isDarkMode ? "../../assets/desktop/btn-dark-mode.svg" : "../../assets/desktop/btn-light-mode.svg";
 
         this.darkElements.forEach( element =>{
-            element.style.backgroundColor = this.isDarkMode? '#19202D' : this.originalBackgroundColor;
+            // element.style.backgroundColor = this.isDarkMode? '#19202D' : this.originalBackgroundColor;
         })
+
+    }
+    @HostBinding('class.dark') get mode() { 
+        return this.isDarkMode;
     }
 }
