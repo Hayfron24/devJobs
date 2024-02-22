@@ -10,7 +10,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { DetailsComponent } from './details/details.component';
 import { RouterModule, Routes } from '@angular/router';
 
-
 const appRoutes: Routes = [
   {path: '', component: MainContentComponent},
   {path: 'details', component: DetailsComponent}
