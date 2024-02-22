@@ -1,4 +1,5 @@
 import { Component, HostBinding } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
     selector: 'app-header',
@@ -13,17 +14,20 @@ export class HeaderComponent{
     originalBackgroundColor = window.getComputedStyle(document.body).backgroundColor;
 
     isDarkMode = false;
-
+    
+    constructor(private themeService: DataService) {}
     onChangeBtn (){
        this.isDarkMode = !this.isDarkMode;
         this.btnImg = this.isDarkMode ? "../../assets/desktop/btn-dark-mode.svg" : "../../assets/desktop/btn-light-mode.svg";
 
         this.darkElements.forEach( element =>{
-            // element.style.backgroundColor = this.isDarkMode? '#19202D' : this.originalBackgroundColor;
+            element.style.backgroundColor = this.isDarkMode? '#121721' : this.originalBackgroundColor;
         })
 
+        
+        this.themeService.toggleDarkMode();
+        
     }
-    @HostBinding('class.dark') get mode() { 
-        return this.isDarkMode;
-    }
+    
+
 }

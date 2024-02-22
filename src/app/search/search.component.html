@@ -1,16 +1,17 @@
-<div class="search-bar w-full bg-white grid grid-cols-3 lg:grid-cols-4 rounded-md mb-20 overflow-hidden ">
+<div class="dark:bg-[#19202D] search-bar w-full bg-white grid grid-cols-3 lg:grid-cols-4 rounded-md mb-20 overflow-hidden ">
     <div class="p-3 col-span-1 lg:col-span-2 border-r border-gray-300">
         <label for="" class="pr-3 text-2xl"><i class="fa-solid fa-magnifying-glass text-blue-500"></i></label>
-        <input class="w-2/4 p-2 outline-none" type="text" placeholder="Filter by title, company, expertise">
+        <input class="dark:bg-[#19202D] w-2/4 p-2 outline-none" type="text" placeholder="Filter by title, company, expertise">
     </div>
     <div class="col-span-1 p-4 border-r border-gray-300">
         <label for="" class="text-2xl pr-3"><i class="fa-solid fa-location-dot text-blue-500">
         </i></label>
-        <input class="w-3/4 p-2 outline-none" placeholder="Filter by location...">
+        <input class="dark:bg-[#19202D] w-3/4 p-2 outline-none" placeholder="Filter by location...">
     </div>
     <div class="col-span-1 p-3">
         <input type="checkbox" class="mr-3 accent-indigo-500">
-        <label for="" class="pr-4">Full Time Only</label>
-        <button class="bg-blue-500 px-5 py-3 rounded text-white">Search</button>
+        <label for="" class="font-bold hidden lg:inline dark:text-white lg:pr-3 ">Full Time Only</label>
+        <label for="" class="font-bold sm:inline lg:hidden pr-3">Full Time</label>
+        <button class="text-sm bg-blue-500 px-3 rounded text-white lg:px-5 py-3 ">Search</button>
     </div>
 </div>

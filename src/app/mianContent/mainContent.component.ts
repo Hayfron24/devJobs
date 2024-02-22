@@ -1,4 +1,5 @@
-import { Component } from "@angular/core"; 
+import { Component } from "@angular/core";
+import { DataService } from "../data.service";
 
 @Component({
     selector: 'app-main-content',
@@ -7,6 +8,31 @@ import { Component } from "@angular/core";
 })
 
 export class MainContentComponent {
+    data: any;
+    displayedCards: any[] = [];
+    cardsPerPage: number = 6;
     
-  
+    
+
+
+
+    constructor(private dataService: DataService) {}
+
+    ngOnInit (): void {
+        this.dataService.getData().subscribe((result) => {
+            this.data = result;
+            
+            this.displayedCards = this.data.slice(0, this.cardsPerPage); 
+            console.log(this.data);
+            console.log(this.displayedCards);
+     });
+    }
+    
+
+    loadMore() {
+        const startIndex = this.displayedCards.length;
+        const endIndex = startIndex + 3; 
+        this.displayedCards.push(...this.data.slice(startIndex, endIndex));
+    }
+
 }
