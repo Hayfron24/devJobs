@@ -1,7 +1,10 @@
 <div class="flex justify-center items-center flex-col relative bottom-9">
     <app-search class="w-4/5"></app-search>
     <div class="w-4/5 grid lg:grid-cols-3 gap-6 md:grid-cols-2 sm:grid-cols-1">
-        <div *ngFor="let job of displayedCards" class="dark:bg-[#19202D] shadow bg-white col-span-1 rounded-lg pl-6 pt-11 relative mb-12">
+        <div *ngFor="let job of displayedCards"
+         class="dark:bg-[#19202D] shadow bg-white col-span-1 rounded-lg pl-6 pt-11 relative mb-12"
+       
+         >
             <p class="text-gray-500 font-light pb-2">{{job.postedAt}}<span class="text-2xl font-bold">. </span><span>{{job.contract}}</span></p>
             <h2 class="dark:text-white text-xl font-bold pb-3">{{job.position}}</h2>
             <p class="text-gray-500 font-light pb-11">{{job.company}}</p>

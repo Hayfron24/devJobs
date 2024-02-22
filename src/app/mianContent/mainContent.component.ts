@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { DataService } from "../data.service";
+import { Router } from "@angular/router";
 
 @Component({
     selector: 'app-main-content',
@@ -16,7 +17,7 @@ export class MainContentComponent {
 
 
 
-    constructor(private dataService: DataService) {}
+    constructor(private router: Router ,private dataService: DataService) {}
 
     ngOnInit (): void {
         this.dataService.getData().subscribe((result) => {
@@ -34,5 +35,6 @@ export class MainContentComponent {
         const endIndex = startIndex + 3; 
         this.displayedCards.push(...this.data.slice(startIndex, endIndex));
     }
+
 
 }

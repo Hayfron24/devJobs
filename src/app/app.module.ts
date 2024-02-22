@@ -12,8 +12,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const appRoutes: Routes = [
   {path: '', component: MainContentComponent},
-  {path: 'details', component: DetailsComponent}
-  // {path: 'details', component: DetailsComponent}
+  {path: 'details/:cardId', component: DetailsComponent}
 ];
 
 @NgModule({
