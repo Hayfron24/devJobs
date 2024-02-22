@@ -36,5 +36,10 @@ export class MainContentComponent {
         this.displayedCards.push(...this.data.slice(startIndex, endIndex));
     }
 
+    goToDetailsPage(cardId: number): void {
+        this.router.navigate(['/details', cardId]);
+        console.log(cardId);
+                
+    }
 
 }
