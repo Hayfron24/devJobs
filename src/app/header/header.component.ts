@@ -16,6 +16,7 @@ export class HeaderComponent{
     isDarkMode = false;
     
     constructor(private themeService: DataService) {}
+    
     onChangeBtn (){
        this.isDarkMode = !this.isDarkMode;
         this.btnImg = this.isDarkMode ? "../../assets/desktop/btn-dark-mode.svg" : "../../assets/desktop/btn-light-mode.svg";
