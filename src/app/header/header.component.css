@@ -3,3 +3,10 @@
     height: 10.125rem;
     background: url("../../assets/desktop/bg-pattern-header.svg") no-repeat;
 }
+
+@media (min-width: 315px) and (max-width: 428px){
+    .header{
+        /* width: 100%; */
+        background: url("../../assets/mobile/bg-pattern-header-mobile.svg") center/cover no-repeat;
+    }
+}
