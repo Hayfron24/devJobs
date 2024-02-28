@@ -42,4 +42,14 @@ export class MainContentComponent {
                 
     }
 
+    applySearchFilter(searchTerm: string) {
+        if (searchTerm) {
+          this.displayedCards = this.data.filter((item: { name: string; }) =>
+            item.name.toLowerCase().includes(searchTerm.toLowerCase())
+          ).slice(0, this.cardsPerPage);
+        } else {
+          this.displayedCards = this.data.slice(0, this.cardsPerPage);
+        }
+      }
+
 }

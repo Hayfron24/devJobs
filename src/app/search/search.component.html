@@ -9,9 +9,9 @@
         <input class="dark:bg-[#19202D] w-3/4 p-2 outline-none" placeholder="Filter by location...">
     </div>
     <div class="col-span-1 p-3">
-        <input type="checkbox" class="mr-3 accent-indigo-500">
+        <input type="checkbox" class="mr-3 accent-indigo-500" [(ngModel)] = "searchTerm" (input)="onSearchChange()">
         <label for="" class="font-bold hidden lg:inline dark:text-white lg:pr-3 ">Full Time Only</label>
-        <label for="" class="font-bold sm:inline lg:hidden px-2">Full Time</label>
+        <label for="" class="dark:text-white font-bold sm:inline lg:hidden px-2">Full Time</label>
         <button class="text-sm bg-blue-500 px-3 rounded text-white lg:px-5 py-3 ">Search</button>
     </div>
 </div>
