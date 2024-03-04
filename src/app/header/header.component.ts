@@ -1,5 +1,6 @@
 import { Component, HostBinding } from '@angular/core';
 import { DataService } from '../data.service';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-header',
@@ -15,7 +16,13 @@ export class HeaderComponent{
 
     isDarkMode = false;
     
-    constructor(private themeService: DataService) {}
+    constructor(private themeService: DataService, private router: Router ) {}
+   
+    goToHomePage(): void {
+        this.router.navigate(['']);
+        // console.log();
+                
+    }
     
     onChangeBtn (){
        this.isDarkMode = !this.isDarkMode;

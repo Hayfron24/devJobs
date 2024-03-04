@@ -23,13 +23,13 @@ const appRoutes: Routes = [
     MainContentComponent,
     SearchComponent,
     DetailsComponent,
-    FormsModule
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes) 
+    RouterModule.forRoot(appRoutes),
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
