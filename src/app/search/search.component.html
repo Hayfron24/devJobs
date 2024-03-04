@@ -1,12 +1,12 @@
 <div class="dark:bg-[#19202D] hidden search-bar w-full bg-white md:grid grid-cols-3 lg:grid-cols-4 rounded-md mb-20 overflow-hidden ">
     <div class="p-3 col-span-1 lg:col-span-2 border-r border-gray-300">
         <label for="" class="pr-3 text-2xl"><i class="fa-solid fa-magnifying-glass text-blue-500"></i></label>
-        <input class="dark:bg-[#19202D] w-2/4 p-2 outline-none" type="text" placeholder="Filter by title, company, expertise" [(ngModel)] = "searchTerm" >
+        <input class="dark:bg-[#19202D] dark:text-white w-2/4 p-2 outline-none" type="text" placeholder="Filter by title, company, expertise" [(ngModel)] = "searchTerm" >
     </div>
     <div class="col-span-1 p-4 border-r border-gray-300">
         <label for="" class="text-2xl pr-3"><i class="fa-solid fa-location-dot text-blue-500">
         </i></label>
-        <input class="dark:bg-[#19202D] w-3/4 p-2 outline-none" placeholder="Filter by location..." [(ngModel)] = "location">
+        <input class="dark:bg-[#19202D] dark:text-white w-3/4 p-2 outline-none" placeholder="Filter by location..." [(ngModel)] = "location">
     </div>
     <div class="col-span-1 p-3">
         <input type="checkbox" class="mr-3 accent-indigo-500" [(ngModel)] = "fullTimeOnly" >
@@ -18,9 +18,9 @@
 
 <div class="dark:bg-[#19202D] search-bar w-full bg-white md:hidden md:grid-cols-3 lg:grid-cols-4 rounded-md mb-20 overflow-hidden ">
     <div class="p-3 col-span-1 lg:col-span-2 ">
-        <input class="dark:bg-[#19202D] w-2/3 py-5 mr-2 px-2 outline-none" type="text" placeholder="Filter by title, company, expertise">
-        <label for="" class="pr-1 text-2xl"><i class="fa-solid fa-filter text-gray-400"></i></label>
-        <label for="" class=" bg-indigo-500 rounded text-2xl px-2 py-1"><i class="fa-solid fa-magnifying-glass text-white"></i></label>
+        <input class="dark:bg-[#19202D] dark:text-white w-2/3 py-5 mr-2 px-2 outline-none" type="text" placeholder="Filter by title, company, expertise" [(ngModel)] = "searchTerm">
+        <button for="" class="pr-1 text-2xl"><i class="fa-solid fa-filter text-gray-400"></i></button>
+        <button for="" class=" bg-indigo-500 rounded text-2xl px-2 py-1"><i class="fa-solid fa-magnifying-glass text-white" (click)="onSearchChange()"></i></button>
     </div>
     
 </div>
